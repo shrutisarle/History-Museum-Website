@@ -1,0 +1,615 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Optima, Segoe, "Segoe UI";
+}
+
+/*============================================== HEADER PART =============================================*/
+
+header {
+  background: #DFB319;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 10vh;
+}
+
+.logo {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15pt;
+  text-decoration: overline;
+  font-weight: bolder;
+  padding-top: 10px;
+}
+
+.logo img {
+  width: 60px;
+  height: 50px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #000;
+}
+
+.logo span{
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100%;
+  background: #E1DEDD;
+}
+
+/*============================================== MENUBAR =============================================*/
+
+nav {
+  position: absolute;
+  text-align: left;
+  left: 0;
+  background: #DFB319;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  padding-bottom: 10px;
+  z-index: 1;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: bold;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-top: 1.2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked~nav {
+  display: block;
+  /* if nav-toggle it's checked, display nav */
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+
+}
+
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+  display: block;
+  background: #fff;
+  height: 2px;
+  width: 1.75em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before, .nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+/*============================================== SLIDER IMAGES ON INDEX PAGE ================================================*/
+
+.slider {
+  overflow: hidden;
+  height: 600px;
+  width: fit-content;
+  align-self: center;
+}
+
+.slider figure div {
+  float: left;
+  width: 20%;
+  align-self: center;
+}
+
+.slider figure img {
+  width: 100%;
+  float: right;
+  align-self: center;
+  position: relative;
+}
+
+.slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0px;
+  left: 0;
+  animation: 10s vikrant infinite;
+}
+
+@keyframes vikrant {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+/*========================================================= SIDEBAR CONTENT =================================================*/
+
+.eventslist {
+  padding-left: 30px;
+}
+
+.eventslist ul li {
+  float: left;
+  padding: 15px;
+}
+
+.eventslist ul li span {
+  display: block;
+  color: #555;
+}
+
+.eventslist h4, .eventslist div {
+  padding: 12px 0px;
+  color: #555;
+}
+
+.more {
+  color: #1A2930;
+  float: right;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+aside {
+  float: left;
+  width: 32%;
+  margin: 0pt 20pt;
+}
+
+aside a {
+  color: #555;
+  text-decoration: none;
+}
+
+aside div {
+  margin-bottom: 20px
+}
+
+.aside_button
+{
+  background-color: #1A2930;
+         border: 1px solid #000;
+         color: #fff;
+         padding: 10px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;      
+         margin: 4px 2px;
+         cursor: pointer;
+         border-radius: 7px;
+         width: 100%;
+         display: block;
+         align-content: center;
+       
+}
+
+.aside_button:hover {
+  background: #D4A500;
+}
+
+/*=================================================== MAIN BODY CONTENT =================================================*/
+
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  width: 95%;
+  margin: 0px auto;
+  list-style: none;
+  justify-content: center;
+}
+
+.main {
+  float: left;
+  width: 60%;
+}
+
+.main h2, aside h2 {
+  color: #3D3930;
+  border-bottom: 1px dotted #a1c392;
+  padding-bottom: 10px;
+}
+
+.contentstyle img {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+
+.contentstyle p:last-child img {
+  float: right;
+  margin-left: 10px;
+}
+
+.contentstyle ul {
+  list-style-type: none;
+}
+
+.contentstyle ul li {
+  padding: 20px 0px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.contentstyle h3 {
+  font-size: 17px;
+  color: #1A2930;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contentstyle span {
+  padding-bottom: 10px;
+  display: block;
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.contentstyle h4 {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.content_heading {
+  padding-top: 15px;
+}
+
+/*==================================================== INDEX PAGE =================================================*/
+
+.index_container_new {
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+}
+
+.flex-grid {
+  display: flex;
+  height: auto;
+  margin: 0 0 15px 0;
+}
+
+.flex-grid .col {
+  flex: 100;
+  text-align: center;
+}
+
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-grid-thirds .col {
+  width: 32%;
+  text-align: center;
+}
+
+.col ul {
+  list-style: none;
+}
+
+.col img {
+  width: 100%;
+}
+
+.col {
+  background: #1A2930;
+  padding: 20px;
+  color: #E1DEDD;
+}
+
+.col h2 {
+  padding-top: 16px;
+  color: #fff;
+}
+
+/*========================================================= ABOUT PAGE =================================================*/
+
+.img_para_spacing {
+  padding-top: 3%;
+}
+
+p {
+  margin-top: 10px;
+}
+
+/*================================================= EXHIBITS CONTENT =================================================*/
+
+.row {
+  display: flex;
+}
+
+.side1 {
+  flex: 50%;
+  padding: 10px;
+}
+
+.side1 img {
+  width: 100%;
+}
+
+/*=====================================================BECOME_A_MEMBER PAGE===========================================*/
+
+.memberlogo {
+  width: 30%;
+  height: 30%;
+  float: right;
+  margin-top: 10px;
+}
+
+.italicfont {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*===================================================== CONTACT US PAGE ===========================================*/
+
+#subject {
+  width: 90%;
+  border-radius: 4px;
+}
+
+#country {
+  width: 37%;
+  border-radius: 20px;
+  height: 30px;
+}
+
+#firstname {
+  width: 45%;
+  border-radius: 20px;
+  height: 30px;
+}
+
+#lastname {
+  width: 45%;
+  border-radius: 20px;
+  height: 30px;
+}
+
+
+
+/*===================================================== FORM ===========================================*/
+
+
+input[type=submit]:hover {
+  background-color: #EBBA11;
+}
+*/
+/* ====================================FORM SEPERATOR====================================*/
+.seperator {
+color: #3D3930;
+border-bottom: 1px dotted #a1c392;
+}
+
+/* ====================================FORM/CONTACT ENDS HERE====================================*/
+
+/* ====================================MEDIA QUERIES FOR RESPONSIVE SCREEN ====================================*/
+
+@media screen and (min-width: 800px) {
+  /* This will kick in once the resolution is more than 800px. */
+  .nav-toggle-label {
+    display: none;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 4fr) 1fr;
+  }
+  .logo {
+    grid-column: 1 / 2;
+    align-items: center;
+    padding-top: 25px;
+  }
+  nav {
+    all: unset; 
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    float: right;
+  }
+  nav ul {
+    display: flex;
+    margin-top: 10px;
+  }
+  nav li {
+    margin-left: 3em;
+  }
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.75em;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms
+  }
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-grid, .flex-grid-thirds {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flex-grid .col, .flex-grid-thirds .col {
+    width: 100%;
+    margin: 0 0 25px 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 9pt 4pt;
+  }
+  aside {
+    float: none;
+    width: 100%;
+  }
+  .gridview li {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 9pt 4pt;
+  }
+}
+
+/*========================================================= FOOTER =================================================*/
+
+footer {
+  padding: 0 15px;
+  background: #1A2930;
+  color: #fff;
+  clear: both;
+  margin-top: auto;
+}
+
+footer p, footer h3, footer form, footer ul {
+  padding: 15px;
+  color: #fff;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  list-style-type: disc;
+  padding-bottom: 10px;
+  margin-left: 28px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.column {
+  flex: 1;
+  margin: 30px 0px 20px;
+  padding: 10px;
+}
+
+.navigation li {
+  display: inline;
+  margin: 0px;
+  padding: 3px;
+}
+
+.logosize {
+  height: 40px;
+  width: 40px;
+}
+
+.navigation img {
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  border-color: #DFB319;
+}
+
+.newsletter_button
+{
+  background-color: #1A2930;
+         border: 1px solid rgb(255, 255, 255);
+         color: #fff;
+         padding: 10px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;      
+         margin: 4px 2px;
+         cursor: pointer;
+         border-radius: 7px;
+         width: 100%;
+         display: block;
+         align-content: center;
+       
+}
+
+
+/*========================================================= FOOTER ENDS=================================================*/
